@@ -1,1 +1,16 @@
 /db/dbconf.yml
+
+# Default ignored files
+/workspace.xml
+/media_service.iml
+/misc.xml
+/modules.xml
+/vcs.xml
+/watcherTasks.xml
+# Datasource local storage ignored files
+/dataSources/
+/.idea
+/vendor/
+/conf/db.conf
+/lastupdate.tmp
+/media_service
