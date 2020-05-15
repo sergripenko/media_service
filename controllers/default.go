@@ -16,4 +16,5 @@ func (c *BaseController) Response(status int, data interface{}, err error) {
 	}
 	c.Ctx.Output.SetStatus(status)
 	c.ServeJSON()
+	c.StopRun()
 }
