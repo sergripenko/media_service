@@ -1,6 +1,18 @@
 # media_service
-
+## 1: Prepare project env
 #### Create app database:
+####  Install PostgreSQL:
+```bash
+sudo apt-get update
+
+sudo apt-get install postgresql
+```
+#### Or follow the installation instructions for PostgreSQL from the official website:
+https://www.postgresql.org/download
+#### Check installation:
+```bash
+sudo -u postgres psql
+```
 ```bash
 CREATE DATABASE media_service;
 ```
@@ -62,3 +74,12 @@ goose down
 dep ensure -v
 ```
 
+#### To run app:
+```bash
+bee run -downdoc=true -gendoc=true
+```
+
+#### Swagger docs:
+```bash
+http://127.0.0.1:8080/swagger/
+```
