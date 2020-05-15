@@ -61,10 +61,10 @@ paths:
         description: body for Images content
         required: true
         schema:
-          $ref: '#/definitions/models.Images'
+          $ref: '#/definitions/api.ImageData'
       responses:
         "201":
-          description: '{int} models.Images'
+          description: '{int} api.CreatedImageData'
         "403":
           description: body is empty
   /images/{id}:
@@ -242,69 +242,92 @@ paths:
         "403":
           description: id is empty
 definitions:
+  api.ImageData:
+    title: ImageData
+    type: object
+    properties:
+      file:
+        type: array
+        items:
+          type: string
+          format: byte
+      filename:
+        type: string
+      height:
+        type: integer
+        format: int64
+      user_id:
+        type: integer
+        format: int64
+      width:
+        type: integer
+        format: int64
   models.Base:
     title: Base
     type: object
     properties:
-      CreatedAt:
+      created_at:
         type: string
         format: datetime
-      DeletedAt:
+      deleted_at:
         type: string
         format: datetime
-      UpdatedAt:
+      updated_at:
         type: string
         format: datetime
   models.Images:
     title: Images
     type: object
     properties:
-      CreatedAt:
+      created_at:
         type: string
         format: datetime
-      DeletedAt:
+      deleted_at:
         type: string
         format: datetime
-      Height:
+      filename:
+        type: string
+      height:
         type: integer
         format: int64
-      Id:
+      id:
         type: integer
         format: int64
-      Title:
+      orig_img_id:
+        type: integer
+        format: int64
+      uniq_id:
         type: string
-      UniqId:
-        type: string
-      UpdatedAt:
+      updated_at:
         type: string
         format: datetime
-      Url:
+      url:
         type: string
-      UserId:
+      user:
         $ref: '#/definitions/models.Users'
-      Width:
+      width:
         type: integer
         format: int64
   models.Users:
     title: Users
     type: object
     properties:
-      CreatedAt:
+      created_at:
         type: string
         format: datetime
-      DeletedAt:
+      deleted_at:
         type: string
         format: datetime
-      Email:
+      email:
         type: string
-      FirstName:
+      first_name:
         type: string
-      Id:
+      id:
         type: integer
         format: int64
-      LastName:
+      last_name:
         type: string
-      UpdatedAt:
+      updated_at:
         type: string
         format: datetime
 tags:
