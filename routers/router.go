@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"media_service/controllers"
+	"media_service/controllers/api"
 
 	"github.com/astaxie/beego"
 )
@@ -19,13 +19,13 @@ func init() {
 
 		beego.NSNamespace("/users",
 			beego.NSInclude(
-				&controllers.UsersController{},
+				&api.UsersController{},
 			),
 		),
 
 		beego.NSNamespace("/images",
 			beego.NSInclude(
-				&controllers.ImagesController{},
+				&api.ImagesController{},
 			),
 		),
 	)
