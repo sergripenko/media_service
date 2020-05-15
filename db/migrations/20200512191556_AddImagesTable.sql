@@ -9,7 +9,7 @@ CREATE TABLE images (
     width       INT,
     uniq_id     VARCHAR(50),
     url         VARCHAR(255),
-    is_orig_img BOOLEAN DEFAULT FALSE,
+    orig_img_id INT,
     created_at  TIMESTAMP,
     updated_at  TIMESTAMP,
     deleted_at  TIMESTAMP,

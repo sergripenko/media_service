@@ -10,14 +10,14 @@ import (
 )
 
 type Images struct {
-	Id        int    `orm:"column(id);pk"`
-	UserId    *Users `orm:"column(user_id);rel(fk)"`
-	Filename  string `orm:"column(filename);null"`
-	Height    int    `orm:"column(height);null"`
-	Width     int    `orm:"column(width);null"`
-	UniqId    string `orm:"column(uniq_id);null"`
-	IsOrigImg bool   `orm:"column(is_orig_img);null"`
-	Url       string `orm:"column(url);null"`
+	Id        int    `orm:"column(id);pk;auto" json:"id"`
+	User      *Users `orm:"column(user_id);rel(fk)" json:"user"`
+	Filename  string `orm:"column(filename);null" json:"filename"`
+	Height    int    `orm:"column(height);null" json:"height"`
+	Width     int    `orm:"column(width);null" json:"width"`
+	UniqId    string `orm:"column(uniq_id);null" json:"uniq_id"`
+	OrigImgId int    `orm:"column(orig_img_id);null" json:"orig_img_id"`
+	Url       string `orm:"column(url);null" json:"url"`
 	Base
 }
 
