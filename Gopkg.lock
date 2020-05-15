@@ -8,6 +8,29 @@
   version = "v1.12.1"
 
 [[projects]]
+  name = "github.com/aws/aws-sdk-go"
+  packages = ["aws","aws/arn","aws/awserr","aws/awsutil","aws/client","aws/client/metadata","aws/corehandlers","aws/credentials","aws/credentials/ec2rolecreds","aws/credentials/endpointcreds","aws/credentials/processcreds","aws/credentials/stscreds","aws/csm","aws/defaults","aws/ec2metadata","aws/endpoints","aws/request","aws/session","aws/signer/v4","internal/context","internal/ini","internal/s3err","internal/sdkio","internal/sdkmath","internal/sdkrand","internal/sdkuri","internal/shareddefaults","internal/strings","internal/sync/singleflight","private/protocol","private/protocol/eventstream","private/protocol/eventstream/eventstreamapi","private/protocol/json/jsonutil","private/protocol/query","private/protocol/query/queryutil","private/protocol/rest","private/protocol/restxml","private/protocol/xml/xmlutil","service/s3","service/s3/internal/arn","service/s3/s3iface","service/s3/s3manager","service/sts","service/sts/stsiface"]
+  revision = "54b0e1357a6c1db7b69f2f003680f53e95c14e04"
+  version = "v1.30.26"
+
+[[projects]]
+  name = "github.com/disintegration/imaging"
+  packages = ["."]
+  revision = "acabd8315e63bfcaac97d52d68a7a0b88d2eea93"
+  version = "v1.6.2"
+
+[[projects]]
+  name = "github.com/google/uuid"
+  packages = ["."]
+  revision = "0cd6bf5da1e1c83f8b45653022c74f71af0538a4"
+  version = "v1.1.1"
+
+[[projects]]
+  name = "github.com/jmespath/go-jmespath"
+  packages = ["."]
+  revision = "c2b33e84"
+
+[[projects]]
   name = "github.com/lib/pq"
   packages = [".","oid","scram"]
   revision = "f3b22b2cad9e4567803b7ffd9853b8acda021438"
@@ -24,6 +47,12 @@
   name = "golang.org/x/crypto"
   packages = ["acme","acme/autocert"]
   revision = "06a226fb4e3765ef3f48aa2852b401bc7b98e981"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/image"
+  packages = ["bmp","ccitt","tiff","tiff/lzw"]
+  revision = "33d19683fad8d833d2299173c7bf8ced0f102764"
 
 [[projects]]
   branch = "master"
@@ -46,6 +75,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "b55930e62ec0c3db07513aae70cb3a57f44ba1e648ee86233fbe9e3bef98d8cf"
+  inputs-digest = "5a77e03de4341fafd4c2578ef657bc2f9c30a6b305600e617c4bbd1da4d6562e"
   solver-name = "gps-cdcl"
   solver-version = 1
