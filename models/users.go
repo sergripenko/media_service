@@ -10,10 +10,10 @@ import (
 )
 
 type Users struct {
-	Id        int    `orm:"column(id);pk"`
-	Email     string `orm:"column(email)"`
-	FirstName string `orm:"column(first_name);null"`
-	LastName  string `orm:"column(last_name);null"`
+	Id        int    `orm:"column(id);pk;auto" json:"id"`
+	Email     string `orm:"column(email)" json:"email"`
+	FirstName string `orm:"column(first_name);null" json:"first_name"`
+	LastName  string `orm:"column(last_name);null" json:"last_name"`
 	Base
 }
 
